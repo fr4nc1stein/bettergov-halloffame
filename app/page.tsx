@@ -1,65 +1,191 @@
-import Image from "next/image";
+"use client";
+import React from "react";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen bg-gray-50 text-gray-800">
+      {/* Header */}
+      <header className="bg-white shadow-sm py-4">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <img 
+                src="https://petition.ph/logos/svg/BetterGov_Icon-Primary.svg" 
+                alt="BetterGov Logo" 
+                className="h-8 w-auto"
+              />
+              <h1 className="text-xl font-semibold text-blue-700">
+                Security Policy
+              </h1>
+            </div>
+            <nav>
+              <ul className="flex space-x-6">
+                <li>
+                  <Link href="/hall-of-fame" className="text-gray-600 hover:text-blue-700">Hall of Fame</Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+      </header>
+
+      {/* Body */}
+      <div className="max-w-4xl mx-auto px-4 py-12">
+        <div className="bg-white rounded-lg shadow-lg p-8">
+          {/* Reporting Section */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-semibold mb-6 text-blue-600 border-b pb-4">
+              Reporting Vulnerabilities
+            </h2>
+            <div className="space-y-6">
+              <div className="bg-blue-50 border-l-4 border-blue-500 p-4">
+                <p className="text-gray-700">
+                  If you discover a security vulnerability in BetterGov.ph, please report it responsibly by emailing{" "}
+                  <a href="mailto:security@bettergov.ph" className="text-blue-600 hover:text-blue-800 font-medium">
+                    security@bettergov.ph
+                  </a>
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-blue-700 mb-3">What to Include in Your Report</h3>
+                <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                  <li>A clear description of the vulnerability</li>
+                  <li>Steps to reproduce the issue</li>
+                  <li>Potential impact and severity</li>
+                  <li>Any relevant screenshots or proof-of-concept code (if applicable)</li>
+                </ul>
+              </div>
+
+              <div className="bg-green-50 border-l-4 border-green-500 p-4">
+                <h3 className="font-semibold text-green-700 mb-2">Our Commitment</h3>
+                <p className="text-gray-700">
+                  We will acknowledge your report within 48 hours and provide a detailed response within 7 days, outlining our next steps.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Scope Section */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-semibold mb-6 text-blue-600 border-b pb-4">
+              Scope
+            </h2>
+            <p className="text-gray-700 mb-6">
+              This security policy applies to the BetterGov.ph website, its associated services, and any related infrastructure.
+            </p>
+
+            <h3 className="font-semibold text-blue-700 mb-4">Out of Scope</h3>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <p className="text-gray-700 mb-4">The following issues are considered out of scope for security reports:</p>
+              <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                <li>Scam & phishing attempts involving BetterGovPh services</li>
+                <li>Physical security vulnerabilities</li>
+                <li>Social engineering attacks</li>
+                <li>Functional, UI, and UX bugs including:
+                  <ul className="list-disc pl-5 mt-2 space-y-1">
+                    <li>Spelling mistakes</li>
+                    <li>Formatting issues</li>
+                    <li>Visual design inconsistencies</li>
+                  </ul>
+                </li>
+                <li>Descriptive error messages</li>
+                <li>HTTP error codes/pages</li>
+                <li>Missing security headers without practical security impact</li>
+                <li>Best practice recommendations without security impact</li>
+                <li>Version disclosure without vulnerabilities</li>
+                <li>Theoretical vulnerabilities without proof of exploitation</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Process Section */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-semibold mb-6 text-blue-600 border-b pb-4">
+              Disclosure Process
+            </h2>
+            <div className="space-y-8">
+              <div>
+                <h3 className="font-semibold text-blue-700 mb-4">1. Initial Report</h3>
+                <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                  <li>Submit your vulnerability report via email</li>
+                  <li>Include all necessary details and proof of concept</li>
+                  <li>Our team will confirm receipt of your report</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-blue-700 mb-4">2. Review and Validation</h3>
+                <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                  <li>Our security team reviews the reported issue</li>
+                  <li>We may ask for additional information or clarification</li>
+                  <li>Valid reports will be confirmed and prioritized</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-blue-700 mb-4">3. Fix Development</h3>
+                <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                  <li>Work on a fix via pull request</li>
+                  <li>Invite you to collaborate if you're interested</li>
+                  <li>Test the fix thoroughly</li>
+                  <li>Coordinate the release timeline</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Guidelines Section */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-semibold mb-6 text-blue-600 border-b pb-4">
+              Guidelines & Safe Harbor
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold text-blue-700 mb-4">Disclosure Guidelines</h3>
+                <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                  <li>Do not disclose to others while under investigation</li>
+                  <li>Do not exploit the vulnerability for any purpose</li>
+                  <li>Do not access, modify, or delete data</li>
+                  <li>Provide reasonable time for resolution</li>
+                  <li>Follow responsible disclosure practices</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-blue-700 mb-4">Legal Safe Harbor</h3>
+                <p className="text-gray-700 mb-4">We will not take legal action against you if you:</p>
+                <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                  <li>Follow our disclosure guidelines</li>
+                  <li>Do not compromise user data</li>
+                  <li>Do not exploit vulnerabilities for malicious purposes</li>
+                  <li>Report vulnerabilities promptly and responsibly</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="bg-gray-100 py-6 mt-16 text-center text-gray-600">
+        <p>
+          © 2025 BetterGov.ph – All content is public domain unless otherwise
+          specified.
+        </p>
+        <p>
+          Contribute at{" "}
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://github.com/bettergovph/"
+            className="text-blue-600 hover:underline"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            GitHub
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+        </p>
+      </footer>
+    </main>
   );
 }
