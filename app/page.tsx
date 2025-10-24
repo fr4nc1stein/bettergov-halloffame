@@ -11,7 +11,7 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <img 
-                src="https://petition.ph/logos/svg/BetterGov_Icon-Primary.svg" 
+                src="/BetterGov_Emblem-Outline-Inversed.svg" 
                 alt="BetterGov Logo" 
                 className="h-8 w-auto"
               />

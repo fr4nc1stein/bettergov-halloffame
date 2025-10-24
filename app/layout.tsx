@@ -15,6 +15,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "BetterGovPH Responsible Disclosure Program",
   description: "Report security vulnerabilities responsibly to help us improve BetterGovPH's security.",
+  icons: {
+    icon: [
+      { url: '/apple-touch-icon.png' },
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+    shortcut: '/apple-touch-icon.png',
+  },
 };
 
 export default function RootLayout({
