@@ -47,7 +47,7 @@ export default function HallOfFame() {
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4">
               <p className="text-gray-700">
                 Want to be featured here? Check out our{" "}
-                <Link href="/security-policy" className="text-blue-600 hover:text-blue-800 font-medium">
+                <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium">
                   Security Policy
                 </Link>
                 {" "}to learn how to participate in our security program.
