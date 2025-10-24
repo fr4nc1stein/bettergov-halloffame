@@ -16,7 +16,7 @@ export default function Home() {
                 className="h-8 w-auto"
               />
               <h1 className="text-xl font-semibold text-blue-700">
-                Security Policy
+                Responsible Disclosure Program
               </h1>
             </div>
             <nav>
