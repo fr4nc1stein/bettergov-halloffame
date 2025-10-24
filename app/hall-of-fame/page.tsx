@@ -64,7 +64,7 @@ export default function HallOfFame() {
                   <p className="text-gray-500 text-sm">October 2025</p>
                 </div>
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-red-100 text-red-800">
-                  Critical
+                  High
                 </span>
               </div>
               <p className="text-gray-700 mb-3">
