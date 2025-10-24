@@ -18,7 +18,7 @@ export default function HallOfFame() {
                 />
               </Link>
               <h1 className="text-xl font-semibold text-blue-700">
-                Hall of Fame
+                Responsible Disclosure Program
               </h1>
             </div>
             <nav>
