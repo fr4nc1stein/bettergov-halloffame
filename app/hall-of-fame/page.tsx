@@ -42,7 +42,7 @@ export default function HallOfFame() {
           {/* Introduction */}
           <div className="mb-12">
             <p className="text-gray-700 mb-4">
-              We extend our sincere gratitude to the following security researchers who have helped make BetterGov more secure through responsible vulnerability reporting.
+              We extend our sincere gratitude to the following security researchers who have helped make BetterGovPH more secure through responsible vulnerability reporting.
             </p>
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4">
               <p className="text-gray-700">
