@@ -12,7 +12,7 @@ export default function HallOfFame() {
             <div className="flex items-center space-x-4">
               <Link href="/">
                 <img 
-                  src="https://petition.ph/logos/svg/BetterGov_Icon-Primary.svg" 
+                  src="/BetterGov_Emblem-Outline-Inversed.svg" 
                   alt="BetterGov Logo" 
                   className="h-8 w-auto"
                 />
